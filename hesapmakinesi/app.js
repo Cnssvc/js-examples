@@ -138,5 +138,104 @@
 // console.log(todoList);
 
 // consttodoList =document,querySelectorAll(".list-group-item");
-// console.log(tooList);     queryselector kullanınca mesela seçiceğin id veya class ın tek bir tane olduğundan eminsen 
-alert("bu siteye girmek tehlikeli ve yasaktır");
+// console.log(tooList);     queryselector kullanınca mesela seçiceğin id veya class ın tek bir tane olduğundan eminsen kullanırsın ,queryselectorAll ı da eğer clastan birkaç tane varsa ve hepsini getirmek istiyorsan 
+
+// const todoList = document.querySelectorAll("li:fisrt-child");ilk çocuk 
+// const todoList = document.querySelectorAll("li:last-child");son çocuk
+// const todoList = document.querySelectorAll("li:nth-child(1)");isteiğin sıradaki çocuk
+
+// const todoList = document.querySelectorAll("li:fisrt-child(odd)"); satır numarası tek li etiketlerini getirir
+// const todoList = document.querySelectorAll("li:fisrt-child(even)"); satır numarası çift etiketleri getirir
+
+// const todoList = Array.from(document.querySelectorAll("li:nth-child(even)"));
+// todoList.forEach(function(todo){
+//     todo.style.backgroundColor="lightgray";
+
+// })
+// console.log(todoList)
+
+// const clearButton=document.querySelector("#todoCLearButton");
+// clearButton.style.backgroundColor="red";
+// clearButton.style.fontWeight="bold";
+// clearButton.style.paddingTop="px";
+
+// parent-child  
+// vale=todo;
+// let ul = todo.parentElement;
+// let cardBody=ul.parentElement;   
+// value=todo.nextElementSiblings;   last child son çocuk demek proviousElementSiblings -> önceki kardeşe gitmek 
+
+// dinamik olarak element oluşturmak
+// const cardBody =document.querySelectorAll("card-bady")[1];
+// console.log(cardBody);
+
+// const link=document.createElement("a");
+// link.id="goblogWebSite";
+// link.className="btn btn-dark btn-sm mt-3";
+// linkhref="http://enesbayram.net";
+// link.innerHTML="kişisel web siteme git";
+
+// cardBody.appendChild(link);
+// console.log(link);
+
+//örnek
+// const todo=document.createElement("li");
+// const todoLink=document.createElement("a");
+// const i= document.createElement("i");
+
+// todo.classListName="list-group-item d-flex fustify-content-between";
+// todo.innerHTML="todo 5";
+
+// todoLink.href="#";
+// todo.classListName="delete-item";
+
+// i.classname="farfa-remove";
+
+// todoLink=appendChild(i);
+// todo=appendChild(todoLink);
+// todolist.appendChild(todo); 
+
+//element silmek
+// const todolist=document.querySelector("list-group");
+// const todos=document.querySelectorAll(".list-groupp-item");
+// const todo1=document.querySelector("ilist-group-item");
+
+// todos[0].remove();
+// todos[todos.lenght-1].remove();
+// todo1.remove();
+// todolist.removeChild(todolist.lastElementChild);
+// todoList.removeChild(todos[0]);
+
+//elementleri yer değiştirmek 
+// const cardBody=document.querySelectorAll(".card-body")[1];
+
+// const newTitle=document.createElement("h2");
+// newTitle.className="card-title";
+// newTitle.textContent="todo listesi";
+
+// cardBody.replaceChild(newTitle ,cardBody.childNodes[1]);  yeniden adlandırırken parametre yerine önce oluşturğumuzu etiketi sonra da değiştirmek istediğimiz etiketi node tipine çevirip yazıyoruz
+
+// event 
+// const clearButton=document.querySelector("#tooClearButton");
+// clearButton.addEventListener("click",changetitle); change title da parantez aç kapa yapmıyoruz yaparsak eğer tıklanmadan bu olay tetiklenir ve ekranda değişiklik yapar.
+
+// function changetitle(){
+//     document.querySelectorAll('.card-title')[1].textContent="todo başlığın değişti";
+
+// }
+// clearButton.addEventListener("click",changetitle);
+// function changetitle(e){
+//     console.log(e.type);   dönen event objesinin tipini
+//     console.log(e.target);  dönen event objesinin etkilediği elementi getirir
+
+// }
+
+//maouse eventları
+// document.addEventListener("DOMContentLoaded",run); sayfa yüklendiğinde demek dom content loaded
+// function run(){
+// console.log("sayfa yüklendi");
+// }
+// window.addEventListener("loaded",run);
+// function run(){
+//     console.log ("sayfa yüklendi");
+// }
