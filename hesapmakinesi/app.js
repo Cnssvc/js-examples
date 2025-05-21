@@ -239,3 +239,37 @@
 // function run(){
 //     console.log ("sayfa yüklendi");
 // }
+
+//keypress harf ve sayılarda tetiklenen eventter
+// keydown harf dışında kalanlarda da çalışır 
+//keyup tuştan elini kaldırdığında çalışan eventter kaydown gibi bütün klavye tuşlarında çalışır
+
+// e.preventDefault() default ayarları engellemek için 
+// const cardTitle = document.querySelectorAll(".card-title")[0];
+// const input = document.querySelector("#todoAddButton");
+
+// input.addEventListener("keypress",run);
+
+// function run(e){
+    // cardTitle.textContent=e.target.value; inputun içindeki değeri cardtitle yaptık başlık yani
+//     console.log(e.target.value);eventın çalışmış olduğu html etiketinin değerini verir
+    
+// }
+//  input eventları 
+//focus odaklandığında çalışan event
+//blur da odaklanılan yerden çıkıldığında çalışan eventter 
+//copy kopyalanan değeri yakalar
+//paste yapıştırılan değeri yakalar
+//cut kesilen değeri yakalar
+//select imlecle kelimeleri seçeriz ve maousu elimizden çektiğimiz an select çalışır 
+//session storage kullanımı
+// sessionStorage.setItem("350","enes");
+// sessionStorage.setItem("216","yasin");
+// sessionStorage.removeItem("154");
+// sessionStorage.getItem("350");
+// sessionStorage.clear(); session storage daki bğtğn değerler gider 
+
+// let names =["ali","enes","kübra","adem","ayşenur"];
+// sessionStorage.setItem("names",JSON.stringify(names)); JSON.stringify name i array miş gibi storage a koy demek
+// let value =JSON.parse(sessionStorage.getItem("names"));JSON ile de names anahtar değerin karşılığını dizi olarak alıyoruz 
+// console.log(typeof value);
